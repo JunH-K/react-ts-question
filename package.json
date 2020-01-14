@@ -1,0 +1,38 @@
+{
+  "name": "ex-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "dev": "webpack-dev-server --open --progress --hot"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@types/highlight.js": "^9.12.3",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.4",
+    "react-hot-loader": "^4.12.18",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1",
+    "css-loader": "^3.3.2",
+    "style-loader": "^1.0.1",
+    "styled-components": "^4.4.1",
+    "highlight.js": "^9.17.1"
+  }
+}
