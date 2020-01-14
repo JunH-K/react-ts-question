@@ -9,7 +9,7 @@ import QuestionListContainer from "./QuestionListContainer";
 const MAIN = 0;
 const QUESTION_LIST = 1;
 const QUESTION = 2;
-const TITLE = '자바스크립트 퀴즈.';
+const TITLE = 'Javascript Quiz';
 const LOCAL_STORAGE_KEY = 'quizScores';
 
 const MainContainer = () => {
@@ -58,7 +58,8 @@ const MainContainer = () => {
 
     const onClickLevelTestStart = (e: any) => {
         const {dataset: {order}} = e.target;
-        const name: string = questions[level][order];
+        const {name}= questions[level][order];
+
         setIndex(QUESTION);
         setOrder(order);
         setTitle(name);
@@ -117,13 +118,16 @@ const Contents = (props: any) => {
 };
 
 type HeaderProps = {
-    title: any,
-    index: any,
+    title: string,
+    index: number,
     onClickScoreReset: any
 }
 
 
 const Header = ({title, index, onClickScoreReset}: HeaderProps) => {
+    console.log(title);
+    console.log(index);
+    console.log(onClickScoreReset);
     return (
         <div className="header">
             <h2 className="title">
