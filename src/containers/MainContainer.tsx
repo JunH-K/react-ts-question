@@ -1,5 +1,5 @@
 import * as React from 'react' ;
-import {useState, useEffect, useRef, ReactChildren, ReactNode} from 'react' ;
+import {useState, useEffect, useRef} from 'react' ;
 import questions from "../data/questions";
 import QuestionContainer from "./QuestionContainer";
 import Store from "../store/Store";
@@ -58,7 +58,7 @@ const MainContainer = () => {
 
     const onClickLevelTestStart = (e: any) => {
         const {dataset: {order}} = e.target;
-        const {name}= questions[level][order];
+        const {name} = questions[level][order];
 
         setIndex(QUESTION);
         setOrder(order);
@@ -125,9 +125,6 @@ type HeaderProps = {
 
 
 const Header = ({title, index, onClickScoreReset}: HeaderProps) => {
-    console.log(title);
-    console.log(index);
-    console.log(onClickScoreReset);
     return (
         <div className="header">
             <h2 className="title">
