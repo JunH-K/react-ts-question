@@ -1,9 +1,7 @@
 import * as React from 'react';
 import {useState, useEffect, useRef, useCallback} from 'react' ;
 import 'highlight.js/styles/atom-one-dark.css'
-// import hljs from 'highlight.js/lib/highlight';
 import * as hljs from 'highlight.js';
-// import javascript from 'highlight.js/lib/languages/javascript';
 
 type QuestionContainerProps = {
     question: any,
@@ -20,19 +18,11 @@ const QuestionContainer = ({question, onClickReset, updateScore}: QuestionContai
     const lastIndex = data.length - 1;
     const matchCount = useRef(0);
 
-    // useEffect(() => {
-    //     // hljs.registerLanguage('javascript', javascript);
-    //     hljs.registerLanguage('javascript',(c)=>void);
-    //
-    //     document.querySelectorAll('pre code').forEach((block) => {
-    //         hljs.highlightBlock(block);
-    //     });
-    // }, [curQuestion]);
-
-    type updateCurQuestionProps = {
-        curQuestion: any,
-        selected: any,
-    }
+    useEffect(() => {
+        document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+        });
+    }, [curQuestion]);
 
     const updateCurQuestion = (curQuestion:any, selected:any) => {
 
